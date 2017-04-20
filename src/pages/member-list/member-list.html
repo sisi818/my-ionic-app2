@@ -1,0 +1,59 @@
+<!--
+  Generated template for the MemberList page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>member-list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button (click)="sortList(1)">
+    正序排序
+  </button>
+  <button ion-button (click)="sortList(2)">
+    倒序排序
+  </button>
+  <button ion-button (click)="sortList(3)">
+    随机排序
+  </button>
+  <ion-card *ngFor="let member of members">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{member.avatar}}">
+      </ion-avatar>
+      <span>
+        <div>日期：{{member.date}}</div>
+        <div>星期：{{member.weekDay}}</div>
+      </span>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <button ion-button ion-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>0 赞</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button ion-left clear small>
+          <ion-icon name="thumbs-down"></ion-icon>
+          <div>0 踩</div>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <ion-note *ngIf="member.isHere" color="secondary">
+          预报对
+        </ion-note>
+        <ion-note *ngIf="!member.isHere" color="danger">
+          预报错
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
