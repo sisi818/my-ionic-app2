@@ -19,13 +19,13 @@ export class MemberList {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public actionCtrl: ActionSheetController) {
     this.members=[
-      {id:11, index:1, date:"2017.04.01", weekDay:"Mon", weather:"male", avatar:"assets/img/2-0.png", isHere:true},
-      {id:2, index:2, date:"2017.04.02", weekDay:"Tue", weather:"female", avatar:"assets/img/2-1.png", isHere:false},
-      {id:3, index:3, date:"2017.04.03", weekDay:"Wen", weather:"male", avatar:"assets/img/2-2.png", isHere:true},
-      {id:4, index:4, date:"2017.04.04", weekDay:"Thu", weather:"female", avatar:"assets/img/2-4.png", isHere:false},
-      {id:55,index:5,  date:"2017.04.05", weekDay:"Fri", weather:"male", avatar:"assets/img/2-6.png", isHere:true},
-      {id:6, index:6, date:"2017.04.06", weekDay:"Sat", weather:"male", avatar:"assets/img/2-8.png", isHere:true},
-      {id:7, index:7, date:"2017.04.07", weekDay:"Sun", weather:"male", avatar:"assets/img/1-4.png", isHere:true}
+      {id:1, date:"2017.04.01", weekDay:"Mon", weather:"male", avatar:"assets/img/2-0.png", isHere:true},
+      {id:2, date:"2017.04.02", weekDay:"Tue", weather:"female", avatar:"assets/img/2-1.png", isHere:false},
+      {id:3, date:"2017.04.03", weekDay:"Wen", weather:"male", avatar:"assets/img/2-2.png", isHere:true},
+      {id:4, date:"2017.04.04", weekDay:"Thu", weather:"female", avatar:"assets/img/2-4.png", isHere:false},
+      {id:5,  date:"2017.04.05", weekDay:"Fri", weather:"male", avatar:"assets/img/2-6.png", isHere:true},
+      {id:6, date:"2017.04.06", weekDay:"Sat", weather:"male", avatar:"assets/img/2-8.png", isHere:true},
+      {id:7, date:"2017.04.07", weekDay:"Sun", weather:"male", avatar:"assets/img/1-4.png", isHere:true}
     ];
     this.sortFlag = true;
   }
@@ -38,10 +38,10 @@ export class MemberList {
     switch(sortType)
     {
         case 1:
-          this.members.sort(function(a,b){return a.index-b.index});
+          this.members.sort(function(a,b){return a.id-b.id});
           break;
         case 2:
-          this.members.sort(function(a,b){return b.index-a.index});
+          this.members.sort(function(a,b){return b.id-a.id});
           break;
         case 3:
           this.members.sort(function(a,b){return Math.random()*1000*a.id - Math.random()*2000*b.id});
