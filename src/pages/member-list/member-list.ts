@@ -19,13 +19,13 @@ export class MemberList {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public actionCtrl: ActionSheetController) {
     this.members=[
-      {id:1, date:"2017.04.01", weekDay:"Mon", weather:"male", avatar:"assets/img/2-0.png", isHere:true},
-      {id:2, date:"2017.04.02", weekDay:"Tue", weather:"female", avatar:"assets/img/2-1.png", isHere:false},
+      {id:1, date:"2017.04.01", weekDay:"Mon", weather:"male", avatar:"assets/img/2-2.png", isHere:true},
+      {id:2, date:"2017.04.02", weekDay:"Tue", weather:"female", avatar:"assets/img/2-0.png", isHere:false},
       {id:3, date:"2017.04.03", weekDay:"Wen", weather:"male", avatar:"assets/img/2-2.png", isHere:true},
-      {id:4, date:"2017.04.04", weekDay:"Thu", weather:"female", avatar:"assets/img/2-4.png", isHere:false},
+      {id:4, date:"2017.04.04", weekDay:"Thu", weather:"female", avatar:"assets/img/2-8.png", isHere:false},
       {id:5,  date:"2017.04.05", weekDay:"Fri", weather:"male", avatar:"assets/img/2-6.png", isHere:true},
-      {id:6, date:"2017.04.06", weekDay:"Sat", weather:"male", avatar:"assets/img/2-8.png", isHere:true},
-      {id:7, date:"2017.04.07", weekDay:"Sun", weather:"male", avatar:"assets/img/1-4.png", isHere:true}
+      {id:6, date:"2017.04.06", weekDay:"Sat", weather:"male", avatar:"assets/img/2-4.png", isHere:true},
+      {id:7, date:"2017.04.07", weekDay:"Sun", weather:"male", avatar:"assets/img/1-6.png", isHere:true}
     ];
     this.sortFlag = true;
   }
